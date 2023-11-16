@@ -8,12 +8,12 @@ FILE *file;
 char *newline;
 if (filename == NULL)
 {
-fprintf(stderr, "Error: Filename is NULL\n");
+fprintf(stderr, "USAGE: monty file\n");
 exit(EXIT_FAILURE); }
 file = fopen(filename, "r");
 if (file == NULL)
 {
-fprintf(stderr, "Error: Unable to open file %s\n", filename);
+fprintf(stderr, "Error: Can't open file %s\n", filename);
 exit(EXIT_FAILURE); }
 while (fgets(buffer_line, sizeof(buffer_line), file) != NULL)
 {
@@ -36,7 +36,7 @@ char *line_copy = _strdup(line);
 
 if (line_copy == NULL)
 {
-fprintf(stderr, "Error: Memory allocation failed\n");
+fprintf(stderr, "Error: malloc failed\n");
 exit(EXIT_FAILURE);
 }
 opcode = strtok(line_copy, delim);
