@@ -44,7 +44,7 @@ if (opcode == NULL)
 free(line_copy);
 return; }
 val = strtok(NULL, delim);
- printf("opcode = %s, val = %s\n", opcode,val);
+/* printf("opcode = %s, val = %s\n", opcode,val);*/
 get_op_func(opcode, val, line_num);
 
 free(line_copy);

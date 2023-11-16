@@ -2,7 +2,7 @@
 /***/
 void get_op_func(char *opcode, char *val, unsigned int line_num)
 {
-int valid = 1, value_n, i;
+int value_n, i;
 stack_t *new_node;
 instruction_t op[] = {
 {"push", opcode_push},
@@ -12,12 +12,12 @@ instruction_t op[] = {
 void (*opcode_func)(stack_t **, unsigned int);
 
 i = 0;
-while (i < 3)
+while (i < 2)
 {
 
 if (strcmp(op[i].opcode, opcode) == 0)
 {
-valid = 1;
+  /*valid = 1;*/
 opcode_func = op[i].f;
 if (i == 0)
 {
@@ -35,11 +35,12 @@ else
 opcode_func(&head, line_num);
  
 }
-else
-valid = 0;
+/*else*/
+  /*valid = 0;*/
+i++;
 }
-if (valid == 0)
+/*if (valid == 0)
 {
 fprintf(stderr, "L%u: unknown instruction %s\n", line_num, opcode);
-exit(EXIT_FAILURE);}
+exit(EXIT_FAILURE);}*/
 }
