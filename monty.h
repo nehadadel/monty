@@ -38,9 +38,17 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+extern stack_t *head;
+
 void readlines_from_file(char *filename);
 void execute_line(const char *line, unsigned int line_num);
 char *_strdup(const char *str);
-int (*get_op_func(char *opcode))(stack_t **,unsigned int);
+void get_op_func(char *opcode, char *val, unsigned int line_num);
+
 stack_t *create_new_node(int n);
+int is_digit(char *str);
+
+void opcode_push(stack_t **stack, unsigned int line_number);
+void opcode_pall(stack_t **stack, unsigned int line_number);
+
 #endif

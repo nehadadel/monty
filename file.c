@@ -28,9 +28,7 @@ fclose(file);
 /***/
 void execute_line(const char *line, unsigned int line_num)
 {
-stack_t **new_node;
-void (*opcode_func)(stack_t **stack, unsigned int line_number);
-char *delim = " \t\n";
+char *delim = " $\t\n";
 char *opcode;
 char *val;
 char *line_copy = _strdup(line);
@@ -46,23 +44,8 @@ if (opcode == NULL)
 free(line_copy);
 return; }
 val = strtok(NULL, delim);
-////////////////////////////////////////////////////
-*new_node = create_new_node(atoi);
-opcode_func = get_op_func(opcode);
-opcode_func(new_node, line_num);
-////////////////////////////////////////////////
+ printf("opcode = %s, val = %s\n", opcode,val);
+get_op_func(opcode, val, line_num);
+
 free(line_copy);
-}
-/***/
-stack_t *create_new_node(int n)
-{
-stack_t *new_node = malloc (sizeof(stack_t));
-if (new_node == NULL)
-{
-fprintf(stderr, "Error: Memory allocation failed\n");
-exit(EXIT_FAILURE); }
-new_node->n = n;
-new_node->next = NULL;
-new_node->prev = NULL;
-return (new_node);
 }
