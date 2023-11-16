@@ -47,6 +47,7 @@ void get_op_func(char *opcode, char *val, unsigned int line_num);
 
 stack_t *create_new_node(int n);
 int is_digit(char *str);
+void free_nodes(stack_t *head);
 
 void opcode_push(stack_t **stack, unsigned int line_number);
 void opcode_pall(stack_t **stack, unsigned int line_number);

@@ -22,3 +22,14 @@ new_node->n = n;
 new_node->next = NULL;
 new_node->prev = NULL;
 return (new_node); }
+/***/
+void free_nodes(stack_t *head)
+{
+stack_t *temp = head;
+while (head != NULL)
+{
+temp = head->next;
+free(head);
+head = temp;
+}
+}

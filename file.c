@@ -24,6 +24,7 @@ if (newline != NULL)
 execute_line(buffer_line, line_num);
 }
 fclose(file);
+free_nodes(head);
 }
 /***/
 void execute_line(const char *line, unsigned int line_num)
