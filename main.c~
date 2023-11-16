@@ -1,0 +1,5 @@
+#include "monty.h"
+void main(void)
+{
+   readlines_from_file("bytecodes/06.m");
+   }
