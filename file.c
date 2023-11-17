@@ -25,6 +25,7 @@ newline = strchr(buffer_line, '\n');
 if (newline != NULL)
 *newline = '\0';
 execute_line(buffer_line, line_num);
+line_num++;
 }
 fclose(file);
 free_nodes(head);
