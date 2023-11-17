@@ -48,11 +48,13 @@ void get_op_func(char *opcode, char *val, unsigned int line_num);
 stack_t *create_new_node(int n);
 int is_digit(char *str);
 void free_nodes(stack_t *head);
+size_t stack_len(stack_t *head);
 
 void opcode_push(stack_t **stack, unsigned int ln_num);
 void opcode_pall(stack_t **s, unsigned int l_n);
 void opcode_pint(stack_t **stack,unsigned int ln_num);
 void opcode_pop(stack_t **stack, unsigned int ln_num);
 void opcode_nop(stack_t **stack, unsigned int ln_num);
+void opcode_swap(stack_t **stack, unsigned int ln_num);
 
 #endif

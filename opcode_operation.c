@@ -15,7 +15,8 @@ instruction_t op[] = {
 {"pall", opcode_pall},
 {"pint", opcode_pint},
 {"pop", opcode_pop},
-{"nop", opcode_nop} };
+{"nop", opcode_nop},
+{"swap", opcode_swap} };
 void (*opcode_func)(stack_t **, unsigned int);
 i = 0;
 while (i < 5)

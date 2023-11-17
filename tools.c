@@ -49,3 +49,24 @@ free(head);
 head = temp;
 }
 }
+/**
+*stack_len - lenth of stack
+*
+*@head: head of stack
+*
+*Return: number of nodes
+*/
+size_t stack_len(stack_t *head)
+{
+stack_t *temp = head;
+size_t counter = 0;
+if (head == NULL)
+return (0);
+
+while (temp)
+{
+temp = temp->next;
+counter++;
+}
+return (counter);
+}
