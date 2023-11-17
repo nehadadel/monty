@@ -53,7 +53,7 @@ __attribute__((unused))stack_t **stack, unsigned int ln_num)
 {
 if (head == NULL)
 {
-fprintf(stderr,"L%u: can't pint, stack empty\n", ln_num);
+fprintf(stderr, "L%u: can't pint, stack empty\n", ln_num);
 exit(EXIT_FAILURE); }
 printf("%d\n", head->n);
 }
@@ -64,12 +64,12 @@ printf("%d\n", head->n);
  *@ln_num: line num
 */
 void opcode_pop(
- __attribute__((unused))stack_t **stack, unsigned int ln_num)
+__attribute__((unused))stack_t **stack, unsigned int ln_num)
 {
 stack_t *temp = head;
 if (head == NULL)
 {
-fprintf(stderr,"L%u: can't pop, stack empty\n", ln_num);
+fprintf(stderr, "L%u: can't pop, stack empty\n", ln_num);
 exit(EXIT_FAILURE); }
 temp = head->next;
 free(head);
@@ -82,7 +82,8 @@ head = temp;
  *@ln_num: line num
 */
 void opcode_nop(
- __attribute__((unused))stack_t **stack, __attribute__((unused))unsigned int ln_num)
+__attribute__((unused))stack_t **stack,
+__attribute__((unused))unsigned int ln_num)
 {
 return;
 }

@@ -15,15 +15,11 @@ instruction_t op[] = {
 {"pall", opcode_pall},
 {"pint", opcode_pint},
 {"pop", opcode_pop},
-{"nop", opcode_nop}
-};
-
+{"nop", opcode_nop} };
 void (*opcode_func)(stack_t **, unsigned int);
-
 i = 0;
-while (i < 4)
+while (i < 5)
 {
-
 if (strcmp(op[i].opcode, opcode) == 0)
 {
 opcode_func = op[i].f;
@@ -45,9 +41,7 @@ else
 opcode_func(&head, line_num);
 return; }
 }
-i++;
-}
-
+i++; }
 fprintf(stderr, "L%u: unknown instruction %s\n", line_num, opcode);
 exit(EXIT_FAILURE); }
 
