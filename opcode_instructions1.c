@@ -13,7 +13,7 @@ size_t len = stack_len(head);
 if (len < 2)
 {
 fprintf(stderr, "L%u: can't swap, stack too short", ln_num);
-exit(EXIT_FAILURE);}
+exit(EXIT_FAILURE); }
 
 swap_int = head->n;
 head->n = head->next->n;
@@ -33,7 +33,7 @@ size_t len = stack_len(head);
 if (len < 2)
 {
 fprintf(stderr, "L%u: can't add, stack too short", ln_num);
-exit(EXIT_FAILURE);}
+exit(EXIT_FAILURE); }
 
 result = head->n + head->next->n;
 opcode_pop(stack, ln_num);

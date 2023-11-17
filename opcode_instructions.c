@@ -36,7 +36,7 @@ return;
 
 while (tmp != NULL)
 {
-printf("%d\n", tmp->n);
+fprintf(stdout, "%d\n", tmp->n);
 tmp = tmp->next;
 counter++;
 }
@@ -55,7 +55,7 @@ if (head == NULL)
 {
 fprintf(stderr, "L%u: can't pint, stack empty\n", ln_num);
 exit(EXIT_FAILURE); }
-printf("%d\n", head->n);
+fprintf(stdout, "%d\n", head->n);
 }
 /**
  *opcode_pop - pop to stack
