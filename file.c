@@ -1,5 +1,9 @@
 #include "monty.h"
-/***/
+/**
+ *readlines_from_file - readlines_from_file
+ *
+ *@filename: file name
+*/
 void readlines_from_file(char *filename)
 {
 unsigned int line_num = 0;
@@ -26,7 +30,12 @@ execute_line(buffer_line, line_num);
 fclose(file);
 free_nodes(head);
 }
-/***/
+/**
+ *execute_line - execute line
+ *
+ *@line: readed line
+ *@line_num: line number
+*/
 void execute_line(const char *line, unsigned int line_num)
 {
 char *delim = " $\t\n";
