@@ -13,12 +13,13 @@ stack_t *new_node;
 instruction_t op[] = {
 {"push", opcode_push},
 {"pall", opcode_pall},
+{"pint", opcode_pint},
 };
 
 void (*opcode_func)(stack_t **, unsigned int);
 
 i = 0;
-while (i < 2)
+while (i < 3)
 {
 
 if (strcmp(op[i].opcode, opcode) == 0)

@@ -42,3 +42,18 @@ counter++;
 }
 
 return; }
+/**
+ *opcode_pint - print frist element in stack
+ *
+ *@stack: new node
+ *@ln_num: line number
+*/
+void opcode_pint(
+__attribute__((unused))stack_t **stack, unsigned int ln_num)
+{
+if (head == NULL)
+{
+fprintf(stderr,"L%u: can't pint, stack empty\n", ln_num);
+exit(EXIT_FAILURE); }
+fprintf(stdout, "%d\n", head->n);
+}
