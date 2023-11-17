@@ -15,6 +15,7 @@ instruction_t op[] = {
 {"pall", opcode_pall},
 {"pint", opcode_pint},
 {"pop", opcode_pop},
+{"nop", opcode_nop}
 };
 
 void (*opcode_func)(stack_t **, unsigned int);

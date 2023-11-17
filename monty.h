@@ -53,4 +53,6 @@ void opcode_push(stack_t **stack, unsigned int ln_num);
 void opcode_pall(stack_t **s, unsigned int l_n);
 void opcode_pint(stack_t **stack,unsigned int ln_num);
 void opcode_pop(stack_t **stack, unsigned int ln_num);
+void opcode_nop(stack_t **stack, unsigned int ln_num);
+
 #endif

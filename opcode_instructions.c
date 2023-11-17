@@ -75,3 +75,14 @@ temp = head->next;
 free(head);
 head = temp;
 }
+/**
+ *opcode_nop - no operation
+ *
+ *@stack: new node to push
+ *@ln_num: line num
+*/
+void opcode_nop(
+ __attribute__((unused))stack_t **stack, __attribute__((unused))unsigned int ln_num)
+{
+return;
+}
