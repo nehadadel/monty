@@ -55,5 +55,5 @@ if (head == NULL)
 {
 fprintf(stderr,"L%u: can't pint, stack empty\n", ln_num);
 exit(EXIT_FAILURE); }
-fprintf(stdout, "%d\n", head->n);
+printf("%d\n", head->n);
 }
