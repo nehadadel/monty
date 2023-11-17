@@ -19,3 +19,23 @@ swap_int = head->n;
 head->n = head->next->n;
 head->next->n = swap_int;
 }
+/**
+ *opcode_add - add the top two elements
+ *
+ *@stack: new node
+ *@ln_num: number line
+*/
+void opcode_add(
+__attribute__((unused))stack_t **stack, unsigned int ln_num)
+{
+int result = 0;
+size_t len = stack_len(head);
+if (len < 2)
+{
+fprintf(stderr, "L%u: can't add, stack too short", ln_num);
+exit(EXIT_FAILURE);}
+
+result = head->n + head->next->n;
+opcode_pop(stack, ln_num);
+head->n = result;
+}
