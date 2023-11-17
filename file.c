@@ -6,7 +6,7 @@
 */
 void readlines_from_file(char *filename)
 {
-unsigned int line_num = 0;
+unsigned int line_num = 1;
 char buffer_line[1024];
 FILE *file;
 char *newline;
