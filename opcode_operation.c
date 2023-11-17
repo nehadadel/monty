@@ -14,12 +14,13 @@ instruction_t op[] = {
 {"push", opcode_push},
 {"pall", opcode_pall},
 {"pint", opcode_pint},
+{"pop", opcode_pop},
 };
 
 void (*opcode_func)(stack_t **, unsigned int);
 
 i = 0;
-while (i < 3)
+while (i < 4)
 {
 
 if (strcmp(op[i].opcode, opcode) == 0)
