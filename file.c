@@ -24,7 +24,6 @@ while (fgets(buffer_line, sizeof(buffer_line), file) != NULL)
 newline = strchr(buffer_line, '\n');
 if (newline != NULL)
 *newline = '\0';
-
 execute_line(buffer_line, line_num);
 }
 fclose(file);
