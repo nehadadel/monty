@@ -54,7 +54,7 @@ if (len < 2)
 {
 fprintf(stderr, "L%u: can't sub, stack too short\n", ln_num);
 exit(EXIT_FAILURE); }
-result = head->n - head->next->n;
+result = head->next->n - head->n;
 opcode_pop(stack, ln_num);
 head->n = result;
 }
