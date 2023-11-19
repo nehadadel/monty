@@ -21,7 +21,7 @@ instruction_t op[] = {
 };
 void (*opcode_func)(stack_t **, unsigned int);
 i = 0;
-while (i < 10)
+while (i < 11)
 {
 if (strcmp(op[i].opcode, opcode) == 0)
 {
