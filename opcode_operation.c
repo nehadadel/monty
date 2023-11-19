@@ -15,13 +15,13 @@ instruction_t op[] = {
 {"pall", opcode_pall},
 {"pint", opcode_pint},
 {"pop", opcode_pop},
-{"nop", opcode_nop},
-{"swap", opcode_swap},
+{"nop", opcode_nop}, {"mod", opcode_mod},
+{"swap", opcode_swap}, {"div", opcode_div},
 {"add", opcode_add}, {"sub", opcode_sub}
 };
 void (*opcode_func)(stack_t **, unsigned int);
 i = 0;
-while (i < 8)
+while (i < 10)
 {
 if (strcmp(op[i].opcode, opcode) == 0)
 {
