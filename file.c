@@ -49,7 +49,7 @@ fprintf(stderr, "Error: malloc failed\n");
 exit(EXIT_FAILURE);
 }
 opcode = strtok(line_copy, delim);
-if (opcode == NULL || opcode[0] == "#")
+if (opcode == NULL || opcode[0] == '#')
 {
 free(line_copy);
 return; }
