@@ -69,7 +69,7 @@ __attribute__((unused))stack_t **stack, unsigned int ln_num)
 stack_t *temp = head;
 if (head == NULL)
 {
-fprintf(stderr, "L%u: can't pop, stack empty\n", ln_num);
+fprintf(stderr, "L%u: can't pop an empty stack\n", ln_num);
 exit(EXIT_FAILURE); }
 temp = head->next;
 free(head);

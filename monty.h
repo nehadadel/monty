@@ -57,5 +57,5 @@ void opcode_pop(stack_t **stack, unsigned int ln_num);
 void opcode_nop(stack_t **stack, unsigned int ln_num);
 void opcode_swap(stack_t **stack, unsigned int ln_num);
 void opcode_add(stack_t **stack, unsigned int ln_num);
-
+void opcode_sub(stack_t **stack, unsigned int ln_num);
 #endif

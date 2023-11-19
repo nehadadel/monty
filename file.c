@@ -42,7 +42,6 @@ char *delim = " $\t\n";
 char *opcode;
 char *val;
 char *line_copy = _strdup(line);
-
 if (line_copy == NULL)
 {
 fprintf(stderr, "Error: malloc failed\n");
@@ -54,7 +53,7 @@ if (opcode == NULL)
 free(line_copy);
 return; }
 val = strtok(NULL, delim);
-/* printf("opcode = %s, val = %s\n", opcode,val);*/
+/*printf("opcode = %s, val = %s\n", opcode,val);*/
 get_op_func(opcode, val, line_num);
 
 free(line_copy);

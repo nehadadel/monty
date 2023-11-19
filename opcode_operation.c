@@ -17,17 +17,18 @@ instruction_t op[] = {
 {"pop", opcode_pop},
 {"nop", opcode_nop},
 {"swap", opcode_swap},
-{"add", opcode_add} };
+{"add", opcode_add}, {"sub", opcode_sub}
+};
 void (*opcode_func)(stack_t **, unsigned int);
 i = 0;
-while (i < 7)
+while (i < 8)
 {
 if (strcmp(op[i].opcode, opcode) == 0)
 {
 opcode_func = op[i].f;
 if (i == 0)
 {
-if (is_digit(val))
+if (val != NULL && is_digit(val))
 {
 value_n = atoi(val);
 new_node = create_new_node(value_n);
