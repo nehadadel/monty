@@ -14,7 +14,7 @@ instruction_t op[] = {
 {"push", opcode_push},
 {"pall", opcode_pall},
 {"pint", opcode_pint},
-{"pop", opcode_pop},
+{"pop", opcode_pop}, {"mul", opcode_mul},
 {"nop", opcode_nop}, {"mod", opcode_mod},
 {"swap", opcode_swap}, {"div", opcode_div},
 {"add", opcode_add}, {"sub", opcode_sub}
