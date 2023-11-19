@@ -13,7 +13,7 @@ if (len < 2)
 {
 fprintf(stderr, "L%u: can't mul, stack too short\n", ln_num);
 exit(EXIT_FAILURE); }
-result = head->next->n * head->n;
+result = (head->next->n) * (head->n);
 opcode_pop(stack, ln_num);
 head->n = result;
 }
