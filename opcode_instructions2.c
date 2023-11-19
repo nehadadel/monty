@@ -59,3 +59,29 @@ else
 fprintf(stderr, "L%u: can't pchar, value out of range\n", ln_num);
 exit(EXIT_FAILURE); }
 }
+/**
+ *opcode_pstr - print str
+ *
+ *@stack: new node to push
+ *@ln_num: line num
+*/
+void opcode_pstr(
+__attribute__((unused))stack_t **stack,
+__attribute__((unused))unsigned int ln_num)
+{
+stack_t *tmp;
+if (head == NULL)
+{
+printf("\n");
+return; }
+tmp = head;
+while (tmp && tmp->n != 0)
+{
+if ((tmp->n >= 97 && tmp->n <= 122) || (tmp->n >= 65 && tmp->n <= 90))
+{
+printf("%c", tmp->n);
+tmp = tmp->next; }
+else
+break;
+}
+}
