@@ -13,7 +13,7 @@ stack_t *new_node;
 instruction_t op[] = {
 {"push", opcode_push},
 {"pall", opcode_pall},
-{"pint", opcode_pint},
+{"pint", opcode_pint}, {"pchar", opcode_pchar},
 {"pop", opcode_pop}, {"mul", opcode_mul},
 {"nop", opcode_nop}, {"mod", opcode_mod},
 {"swap", opcode_swap}, {"div", opcode_div},
@@ -21,7 +21,7 @@ instruction_t op[] = {
 };
 void (*opcode_func)(stack_t **, unsigned int);
 i = 0;
-while (i < 11)
+while (i < 12)
 {
 if (strcmp(op[i].opcode, opcode) == 0)
 {
