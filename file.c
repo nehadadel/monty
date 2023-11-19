@@ -10,6 +10,7 @@ unsigned int line_num = 1;
 char buffer_line[1024];
 FILE *file;
 char *newline;
+
 if (filename == NULL)
 {
 fprintf(stderr, "USAGE: monty file\n");
@@ -48,7 +49,7 @@ fprintf(stderr, "Error: malloc failed\n");
 exit(EXIT_FAILURE);
 }
 opcode = strtok(line_copy, delim);
-if (opcode == NULL || opcode[0] = "#")
+if (opcode == NULL || opcode[0] == "#")
 {
 free(line_copy);
 return; }
