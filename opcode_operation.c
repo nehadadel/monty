@@ -11,7 +11,7 @@ void get_op_func(char *opcode, char *val, unsigned int line_num)
 int value_n, i;
 stack_t *new_node;
 instruction_t op[] = {
-{"push", opcode_push},
+{"push", opcode_push}, {"rotl", opcode_rotl},
 {"pall", opcode_pall}, {"pstr", opcode_pstr},
 {"pint", opcode_pint}, {"pchar", opcode_pchar},
 {"pop", opcode_pop}, {"mul", opcode_mul},
@@ -21,7 +21,7 @@ instruction_t op[] = {
 };
 void (*opcode_func)(stack_t **, unsigned int);
 i = 0;
-while (i < 13)
+while (i < 14)
 {
 if (strcmp(op[i].opcode, opcode) == 0)
 {
