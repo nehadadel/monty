@@ -16,7 +16,6 @@ return;
 
 n = head->n;
 new = create_new_node(n);
-opcode_pop(s, l_n);
 tmp = head;
 
 while (tmp->next)
@@ -24,4 +23,5 @@ while (tmp->next)
 tmp = tmp->next;
 }
 tmp->next = new;
+opcode_pop(s, l_n);
 }
