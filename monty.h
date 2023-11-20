@@ -64,4 +64,5 @@ void opcode_mod(stack_t **stack, unsigned int ln_num);
 void opcode_pchar(stack_t **stack, unsigned int ln_num);
 void opcode_pstr(stack_t **stack, unsigned int ln_num);
 void opcode_rotl(stack_t **stack, unsigned int ln_num);
+void opcode_rotr(stack_t **stack, unsigned int ln_num);
 #endif

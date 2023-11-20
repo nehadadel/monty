@@ -17,11 +17,11 @@ instruction_t op[] = {
 {"pop", opcode_pop}, {"mul", opcode_mul},
 {"nop", opcode_nop}, {"mod", opcode_mod},
 {"swap", opcode_swap}, {"div", opcode_div},
-{"add", opcode_add}, {"sub", opcode_sub}
+{"add", opcode_add}, {"sub", opcode_sub}, {"rotr", opcode_rotr}
 };
 void (*opcode_func)(stack_t **, unsigned int);
 i = 0;
-while (i < 14)
+while (i < 15)
 {
 if (strcmp(op[i].opcode, opcode) == 0)
 {
