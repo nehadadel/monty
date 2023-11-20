@@ -53,5 +53,4 @@ tmp2 = tmp->prev;
 tmp->prev = NULL;
 head = tmp;
 tmp2->next = NULL;
- 
 }
