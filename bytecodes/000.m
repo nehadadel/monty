@@ -1,3 +1,4 @@
-push 8
-rotl
+push 1
+push 2
+rotr
 pall

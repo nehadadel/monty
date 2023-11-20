@@ -32,12 +32,12 @@ opcode_pop(s, l_n);
  *@l_n: line num
 */
 void opcode_rotr(
-__attribute__((unused))stack_t **s, unsigned int l_n)
+__attribute__((unused))stack_t **s,
+__attribute__((unused))unsigned int l_n)
 {
-int n;
-stack_t *new, *tmp;
+stack_t *tmp2, *tmp;
 
-if (head == NULL)
+if (head == NULL || head->next == NULL)
 return;
 
 
@@ -47,8 +47,10 @@ while (tmp->next)
 {
 tmp = tmp->next;
 }
-n = tmp->n;
-new = create_new_node(n);
-free(tmp);
-opcode_push(&new, l_n);
+tmp->next = head;
+tmp2 = tmp->prev;
+tmp->prev = NULL;
+head = tmp;
+tmp2->next = NULL;
+ 
 }
