@@ -84,4 +84,5 @@ tmp = tmp->next; }
 else
 break;
 }
+printf("\n");
 }
