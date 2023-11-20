@@ -48,6 +48,7 @@ while (tmp->next)
 tmp = tmp->next;
 }
 tmp->next = head;
+head->prev = tmp;
 tmp2 = tmp->prev;
 tmp->prev = NULL;
 head = tmp;
